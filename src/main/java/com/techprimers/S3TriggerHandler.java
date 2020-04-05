@@ -27,7 +27,7 @@ public class S3TriggerHandler implements RequestHandler<S3Event, String> {
             reader.lines()
                     .forEach(line -> System.out.println("Line: " + line));
         } catch (final IOException e) {
-            System.out.println("I OException: " + e.getMessage());
+            System.out.println("IOException: " + e.getMessage());
         }
 
         System.out.println("Finished... processing file");
