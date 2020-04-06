@@ -25,7 +25,7 @@ public class S3TriggerHandler implements RequestHandler<S3Event, String> {
              final InputStreamReader streamReader = new InputStreamReader(s3Object.getObjectContent(), StandardCharsets.UTF_8);
              final BufferedReader reader = new BufferedReader(streamReader)) {
             reader.lines()
-                    .forEach(line -> System.out.println("Line: " + line));
+                    .forEach(line -> System.out.println("Line : " + line));
         } catch (final IOException e) {
             System.out.println("IOException: " + e.getMessage());
         }
